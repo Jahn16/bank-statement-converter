@@ -4,5 +4,5 @@ from typing import Any, BinaryIO
 
 class BaseUseCase(ABC):
     @abstractmethod
-    def execute(self, file: BinaryIO) -> Any:
+    def execute(self, file: BinaryIO, bank: str) -> Any:
         pass
