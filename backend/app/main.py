@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.routers import convert
+from app.settings import Settings
 
 app = FastAPI(
     title="Fatura2Csv",
@@ -10,12 +11,10 @@ app = FastAPI(
 )
 
 
-# TODO: make a setting class to store origins
-origins = ["http://localhost:3000", "localhost:3000"]
-
+settings = Settings()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=settings.backend_cors_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
