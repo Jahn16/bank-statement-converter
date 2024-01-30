@@ -1,0 +1,1 @@
+export { StartAdornment } from "./StartAdornment";

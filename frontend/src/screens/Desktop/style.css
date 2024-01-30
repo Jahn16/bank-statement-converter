@@ -1,0 +1,249 @@
+.desktop {
+  background-color: #ff8719e6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.desktop .group-wrapper {
+  background-color: #ff8719e6;
+  background-image: url(../../../static/img/desktop-7.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 900px;
+  width: 1440px;
+}
+
+.desktop .group {
+  height: 590px;
+  left: 208px;
+  position: relative;
+  top: 155px;
+  width: 1026px;
+}
+
+.desktop .div {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 24px;
+  font-weight: 700;
+  height: 29px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: right;
+  top: 561px;
+  width: 1024px;
+}
+
+.desktop .overlap-group-wrapper {
+  height: 551px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1026px;
+}
+
+.desktop .overlap-group {
+  background-color: #ffffff;
+  border-radius: 24px;
+  height: 551px;
+  position: relative;
+  width: 1024px;
+}
+
+.desktop .p {
+  color: #565656;
+  font-family: "Inter", Helvetica;
+  font-size: 64.7px;
+  font-weight: 700;
+  height: 312px;
+  left: 64px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 121px;
+  width: 400px;
+}
+
+.desktop .group-2 {
+  height: 307px;
+  left: 595px;
+  position: absolute;
+  top: 124px;
+  width: 365px;
+}
+
+.desktop .group-3 {
+  height: 74px;
+  left: 0;
+  position: absolute;
+  top: 119px;
+  width: 367px;
+}
+
+.desktop .text-wrapper-2 {
+  color: #565656;
+  font-family: "Inter", Helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.desktop .input-instance {
+  left: 0 !important;
+  position: absolute !important;
+  top: 36px !important;
+}
+
+.desktop .design-component-instance-node {
+  color: #565656 !important;
+}
+
+.desktop .group-4 {
+  height: 87px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 367px;
+}
+
+.desktop .button-group {
+  align-items: flex-start;
+  display: flex;
+  left: 0;
+  position: absolute;
+  top: 36px;
+  width: 365px;
+}
+
+.desktop .button-left {
+  align-items: center;
+  /* background-color: #ff8719; */
+
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #ff8719;
+  border-radius: 4px 0px 0px 4px;
+  display: flex;
+  gap: 10px;
+  padding: 16px 20px;
+  position: relative;
+  width: 108px;
+}
+
+.desktop .text-wrapper-3 {
+  /* color: var(--defaultwhite); */
+  color: #ff8719;
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-right: -3px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: 71px;
+}
+
+.desktop .button-middle {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #ff8719;
+  display: flex;
+  gap: 10px;
+  margin-left: -1px;
+  padding: 16px 20px;
+  position: relative;
+  width: 142px;
+}
+
+.desktop .text-wrapper-4 {
+  color: #ff8719;
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-right: -3px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: 105px;
+}
+
+.desktop .button-right {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #ff8719;
+  border-radius: 0px 4px 4px 0px;
+  display: flex;
+  gap: 10px;
+  margin-left: -1px;
+  margin-right: -2px;
+  padding: 16px 20px;
+  position: relative;
+  width: 119px;
+}
+
+.desktop .text-wrapper-5 {
+  color: #ff8719;
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-right: -6px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: 85px;
+}
+
+.desktop .button {
+  all: unset;
+  align-items: flex-start;
+  background-color: #ff8719;
+  border-radius: 1000px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 8px;
+  left: 0;
+  padding: 16px 24px;
+  position: absolute;
+  top: 257px;
+  width: 365px;
+}
+
+.desktop .text-wrapper-6 {
+  color: var(--defaultwhite);
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-right: -1px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: 318px;
+}
+
+input:hover, label:hover{
+  cursor: pointer;
+}
+.button:hover {
+    background-color:#ef7b2a;
+    transition: 0.7s;
+    cursor: pointer;
+  }
