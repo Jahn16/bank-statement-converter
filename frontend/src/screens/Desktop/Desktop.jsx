@@ -8,6 +8,14 @@ export const Desktop = () => {
   const [bank, setBank] = useState(null);
 
   const handleBankChange = (event) => {
+    if (event.target.value === "picpay") {
+      alert("Suporte para PicPay ainda está em desenvolvimento")
+      return
+    }
+    else if (event.target.value === "other") {
+      alert("Sugira um novo banco a ser adicionado por meio de um issue no GitHub https://github.com/Jahn16/bank-statement-to-csv")
+      return
+    }
     setBank(event.target.value)
   }
 
@@ -21,14 +29,21 @@ export const Desktop = () => {
       headers: {
         'Content-Type': 'multipart/form-data'
       },
-      responseType: "blob"
     }).then(response => {
-      let url = window.URL.createObjectURL(response.data);
+      let blob = new Blob([response.data])
+      let url = window.URL.createObjectURL(blob);
       let a = document.createElement('a');
       a.href = url;
       a.download = "data.csv";
       a.click();
-    }).catch(err => console.log(err))
+    }).catch(err => {
+      if(err.response.status >= 400 && err.response.status < 500){
+        alert(err.response.data.detail)
+        return
+      }
+      alert("Um erro interno ocorreu")
+
+    })
 
   };
   return (
