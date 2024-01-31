@@ -4,3 +4,4 @@ uvicorn[default]==0.26.0
 python-multipart==0.0.6
 pdfminer.six==20231228
 pydantic-settings==2.1.0
+structlog==24.1.0
