@@ -1,0 +1,11 @@
+*
+
+!./src/
+!./.babelrc.json
+!./.parcelrc
+!./package.json
+!./package-lock.json
+!./styleguide.css
+!./nginx.conf
+!./index.html
+!./static/
