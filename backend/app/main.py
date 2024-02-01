@@ -3,6 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.routers import convert
 from app.settings import Settings
+from app.utils.logging import setup_logging
+
+setup_logging()
 
 app = FastAPI(
     title="Fatura2Csv",

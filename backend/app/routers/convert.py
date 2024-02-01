@@ -1,11 +1,13 @@
 from typing import Annotated
 
+import structlog
 from fastapi import APIRouter, Form, HTTPException, UploadFile
 from fastapi.responses import StreamingResponse
 
 from app.exceptions.bank import BankNotSupported
 from app.use_cases.convert_to_csv import ConvertToCsv
 
+logger = structlog.get_logger()
 router = APIRouter()
 
 
@@ -14,6 +16,9 @@ def convert_pdf_to_csv(
     file: UploadFile, bank: Annotated[str, Form()]
 ) -> StreamingResponse:
     if file.content_type != "application/pdf":
+        logger.warning(
+            "File type not supported", content_type=file.content_type
+        )
         raise HTTPException(status_code=400, detail="The file must be a pdf")
 
     convert_use_case = ConvertToCsv()
