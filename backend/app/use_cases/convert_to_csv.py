@@ -1,4 +1,4 @@
-from io import StringIO
+from io import BytesIO, StringIO
 from typing import BinaryIO
 
 import structlog
@@ -15,7 +15,7 @@ logger = structlog.get_logger()
 
 class ConvertToCsv(BaseUseCase):
     def execute(self, file: BinaryIO, bank: str) -> StringIO:
-        pdf_reader = PDFReader(file)  # type: ignore
+        pdf_reader = PDFReader(BytesIO(file.read()))
         parser_context = ParserContext()
         if bank.lower() == "inter":
             parser_context.set_strategy(InterParser())
