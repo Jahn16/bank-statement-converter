@@ -26,6 +26,11 @@ def convert_pdf_to_csv(
         result = convert_use_case.execute(file.file, bank)
     except BankNotSupported as e:
         raise HTTPException(status_code=400, detail=str(e))
+    except Exception:
+        logger.exception("Could not process csv")
+        raise HTTPException(
+            status_code=500, detail="Could not generate CSV file"
+        )
     response = StreamingResponse(
         iter([result.getvalue()]),
         media_type="text/csv",
