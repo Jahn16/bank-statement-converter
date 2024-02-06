@@ -25,7 +25,7 @@ export const Desktop = () => {
     formData.append('file', file);
     formData.append('bank', bank);
 
-    await axios.post('http://localhost:8000/pdf_to_csv', formData, {
+    await axios.post(process.env.BACKEND_URL, formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       },
