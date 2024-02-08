@@ -1,0 +1,15 @@
+version: '3'
+services:
+  bsc-backend:
+    build: ./backend
+    environment:
+      BACKEND_CORS_ORIGINS: '["*"]'
+    ports:
+      - 3000:8000
+  bsc-frontend:
+    build: 
+      context: ./frontend
+      args:
+        REACT_APP_BACKEND_URL: http://localhost:3000/pdf_to_csv
+    ports:
+      - 8000:80
