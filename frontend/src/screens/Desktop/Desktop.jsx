@@ -25,7 +25,7 @@ export const Desktop = () => {
     formData.append('file', file);
     formData.append('bank', bank);
 
-    await axios.post(process.env.BACKEND_URL, formData, {
+    await axios.post(process.env.REACT_APP_BACKEND_URL, formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       },
