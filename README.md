@@ -7,8 +7,6 @@ This application is built for converting bank statements/bills to  CSV format.  
 
 ## Table of Contents (Optional)
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
 - [Usage](#usage)
 - [Roadmap](#roadmap)
 - [Credits](#credits)
