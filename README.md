@@ -5,7 +5,7 @@
 
 This application is built for converting bank statements/bills to  CSV format.  The motivation behind this project is that for most personal finance apps (I personally use Firefly-iii) the way you input data is through a CSV file, however many banks only export data in PDF format.
 
-## Table of Contents (Optional)
+## Table of Contents
 
 - [Usage](#usage)
 - [Roadmap](#roadmap)
