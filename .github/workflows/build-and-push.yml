@@ -11,9 +11,9 @@ jobs:
       matrix:
         docker:
           - name: bsc-backend
-            file: backend/Dockerfile
+            context: backend
           - name: bsc-frontend
-            file: frontend/Dockerfile
+            context: frontend
     steps:
       -
         name: Checkout
@@ -40,7 +40,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: .
-          file: ${{ matrix.docker.file }}
+          context: ${{ matrix.docker.context }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
