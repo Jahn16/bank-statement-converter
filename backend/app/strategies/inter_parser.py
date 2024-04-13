@@ -31,8 +31,7 @@ class InterParser(ParserStrategy):
 
     def _is_transaction(self, line: str) -> bool:
         return (
-            bool(re.match(self.regex_pattern, line))
-            and "Pagamento On Line" not in line
+            super()._is_transaction(line) and "Pagamento On Line" not in line
         )
 
     def _parse_transaction(self, line: str) -> dict[str, str]:

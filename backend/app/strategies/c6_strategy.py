@@ -24,16 +24,12 @@ class C6Parser(ParserStrategy):
             "Valor": value if transaction_type == "C" else f"-{value}",
         }
 
-    def _is_transaction(self, line: str) -> bool:
-        return bool(re.match(self.regex_pattern, line, re.UNICODE))
-
     def parse_transactions(
         self, pdf_reader: PDFReader
     ) -> list[dict[str, str]]:
         pages = pdf_reader.get_pages()
         text = pdf_reader.extract_text(pages)
         lines = text.splitlines()
-        transactions_lines = list(filter(self._is_transaction, lines))
-        logger.debug(transactions_lines)
+        transactions_lines = list(filter(super()._is_transaction, lines))
         transactions = list(map(self.parse_line, transactions_lines))
         return transactions
