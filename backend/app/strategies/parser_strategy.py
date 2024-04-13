@@ -8,4 +8,4 @@ class ParserStrategy(ABC):
     def parse_transactions(
         self, pdf_reader: PDFReader
     ) -> list[dict[str, str]]:
-        pass
+        raise NotImplementedError
