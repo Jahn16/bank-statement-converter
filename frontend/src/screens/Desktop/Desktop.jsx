@@ -8,11 +8,7 @@ export const Desktop = () => {
   const [bank, setBank] = useState(null);
 
   const handleBankChange = (event) => {
-    if (event.target.value === "picpay") {
-      alert("Suporte para PicPay ainda está em desenvolvimento")
-      return
-    }
-    else if (event.target.value === "other") {
+    if (event.target.value === "other") {
       alert("Sugira um novo banco a ser adicionado por meio de um issue no GitHub https://github.com/Jahn16/bank-statement-to-csv")
       return
     }
@@ -67,7 +63,7 @@ export const Desktop = () => {
                         <label className="text-wrapper-3"><input type="radio" value="inter" onChange={handleBankChange} checked={bank === 'inter'} />Inter</label>
                       </div>
                       <div className="button-middle">
-                        <label className="text-wrapper-4"><input type="radio" value="picpay" onChange={handleBankChange} checked={bank === 'picpay'} />PicPay</label>
+                        <label className="text-wrapper-4"><input type="radio" value="c6" onChange={handleBankChange} checked={bank === 'c6'} />C6 Bank</label>
                       </div>
                       <div className="button-right">
                         <label className="text-wrapper-5"><input type="radio" value="other" onChange={handleBankChange} checked={bank === 'other'} />Outro</label>

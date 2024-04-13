@@ -27,7 +27,8 @@ Go to http://localhost:8000 and select the bank statement file and the bank it c
 - [ ] Bank Support
   - [x] Inter
   - [ ] PicPay
-  - [ ] C6 Bank
+  - [x] C6 Bank
+- [ ] Support for password protected PDF
 
 ## Credits
 
