@@ -31,8 +31,6 @@ export const Desktop = () => {
             let url = window.URL.createObjectURL(blob);
             let a = document.createElement('a');
             let csvFileName = file.name.split(".")[0] + ".csv"
-            console.log(csvFileName)
-
             a.href = url;
             a.download = csvFileName
             a.click();
