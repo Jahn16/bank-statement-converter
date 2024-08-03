@@ -1,13 +1,13 @@
-FROM python:3.10-slim as build
+FROM python:3.12-slim as build
 
 WORKDIR /usr/app
 RUN python -m venv /usr/app/venv
 ENV PATH="/usr/app/venv/bin:$PATH"
 
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.lock
 
-FROM python:3.10-slim
+FROM python:3.12-slim
 
 RUN groupadd -g 999 fastmock && useradd -r -u 999 -g fastmock fastmock
 
@@ -22,4 +22,4 @@ ENV PATH="/usr/app/venv/bin:$PATH"
 EXPOSE 8000
 
 
-ENTRYPOINT ["uvicorn", "--host", "0.0.0.0", "app.main:app"]
+CMD ["fastapi", "run", "app/main.py"]
