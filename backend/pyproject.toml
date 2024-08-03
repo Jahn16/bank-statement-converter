@@ -1,9 +1,30 @@
+[project]
+name = "bank-statement-converter"
+version = "1.1.0"
+description = "This application is built for converting bank statements/bills to CSV format"
+authors = [
+    { name = "Jahn16", email = "jpdeoliveiraferreira@gmail.com" }
+]
+dependencies = [
+    "fastapi[standard]",
+    "uvicorn",
+    "python-multipart",
+    "pdfminer.six",
+    "pydantic-settings",
+    "structlog"
+]
+readme = "README.md"
+requires-python = ">= 3.10"
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "mypy"
+]
+
 [tool.isort]
 profile = "black"
 line_length = 79
 
-
 [tool.mypy]
-python_version = "3.12"
 strict = true
-disallow_untyped_decorators = false
