@@ -10,10 +10,10 @@ logger = structlog.get_logger()
 
 class InterParser(ParserStrategy):
     def __init__(self) -> None:
-        self.regex_pattern = r"(^\d{2}\s[a-z]{3}\.?\s\d{4})\s(.+?)\s((?:\+\s)?R\$\s[0-9.]*\,\d*$)"  # noqa: E501
+        self.regex_pattern = r"(^\d{2}\sde\s[a-z]{3}\.?\s\d{4})\s(.+?)(?:\s-\s)((?:\+\s)?R\$\s[0-9.]*\,\d*$)"  # noqa: E501
 
     def __format_date(self, date: str) -> str:
-        date, month_abbreviation, year = date.split(" ")
+        date, _, month_abbreviation, year = date.split(" ")
         month_abbreviation = month_abbreviation[:3]
         months_abbreviations = {
             "jan": "01",
