@@ -1,5 +1,4 @@
 *
 
 !app
-!requirements.txt
-
+!requirements.lock

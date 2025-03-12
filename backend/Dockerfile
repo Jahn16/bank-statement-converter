@@ -4,7 +4,7 @@ WORKDIR /usr/app
 RUN python -m venv /usr/app/venv
 ENV PATH="/usr/app/venv/bin:$PATH"
 
-COPY requirements.txt .
+COPY requirements.lock .
 RUN pip install -r requirements.lock
 
 FROM python:3.12-slim
